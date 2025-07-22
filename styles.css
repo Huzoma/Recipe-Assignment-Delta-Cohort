@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* CSS VARIABLES */
+:root {
+  --dark-brown: #180C08;
+  --dark-brown-transparent: #180C0832;
+  --chocolate-brown: #592B0A;
+  --white: #FFFFFF;
+  --white-transparent: #ffffff39;
+  --silver-brown-transparent: #b6b0ac32;
+  --silver-brown: #b6b0ac;
+  --black: #08090B;
+  --black-transparent: #08090B32;
+  --coffee-brown: #854B22;
+}
+
+/* CSS RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* UTILITY STYLING */
+html{
+    font-size: 10px;
+}
+body {
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: var(--silver-brown);
+    background-image: url(assets/Images/BG-baking-table-2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+h2, h3, h4, h5, h6 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 600;
+    font-size: 2.4rem;
+    color: var(--coffee-brown);
+    margin-top: 1.8rem;
+}
+h1 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 800;
+    font-size: 3.2rem;
+    color: var(--coffee-brown);
+}
+
+ul {
+    font-size: 1.2rem;
+    li::marker {
+        color: var(--coffee-brown);
+    }
+}
+
+ol {
+    font-size: 1.2rem;
+    li::marker {
+        color: var(--coffee-brown);
+        font-weight: 500;
+    }
+}
+
+/* RECIPE CARD STYLING */
+#recipe-card {
+  position: relative;
+  width: 450px;
+  margin: 5rem auto;
+  padding: 24px;
+  border-radius: 10px;
+  background: var(--dark-brown-transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  
+  /* Prepare border and transforms */
+  border: 1px solid transparent;
+  overflow: hidden;
+  transform: scale(1);
+  transition:
+    transform 0.3s ease-out,
+    border-color 0.3s ease-out;
+}
+
+#recipe-card:hover {
+  transform: scale(1.05);
+  border-color: var(--chocolate-brown);
+}
+#signature {
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: var(--silver-brown);
+    text-align: center;
+    span {
+        font-family: "Bricolage Grotesque", sans-serif;
+        font-weight: 500;
+        color: var(--coffee-brown);
+    }
+}
